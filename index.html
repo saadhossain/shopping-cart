@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <!-- Tailwind CSS  and Daisy UI CDN-->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <main>
+        <div class="container w-10/12 mx-auto my-5">
+            <!-- Products -->
+            <div class="flex justify-center gap-4">
+                <div class="w-3/4 grid grid-cols-3 gap-5">
+                    <!-- Product 1 -->
+                    <div class="card w-full bg-base-100 shadow-xl">
+                        <figure><img src="img/laptop.jpg" alt="Laptop" /></figure>
+                        <div class="card-body">
+                            <h2 id="product-name" class="card-title">Laptop</h2>
+                            <p>Gaming Laptop with High Configuration!</p>
+                            <h3 class="text-2xl">Price: $<span id="price">250</span></h3>
+                            <div class="card-actions justify-end">
+                                <button onclick="addToCart(this)" class="btn btn-primary">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 2 -->
+                    <div class="card w-full bg-base-100 shadow-xl">
+                        <figure><img src="img/monitor.jpg" alt="Laptop" /></figure>
+                        <div class="card-body">
+                            <h2 id="product-name" class="card-title">Monitor</h2>
+                            <p>Xiaomi Monitor with High Resolution!</p>
+                            <h3 class="text-2xl">Price: $<span id="price">150</span></h3>
+                            <div class="card-actions justify-end">
+                                <button onclick="addToCart(this)" class="btn btn-primary">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 3 -->
+                    <div class="card w-full bg-base-100 shadow-xl">
+                        <figure><img src="img/ryzen.jpg" alt="Laptop" /></figure>
+                        <div class="card-body">
+                            <h2 id="product-name" class="card-title">Ryzen 5</h2>
+                            <p>Gaming Processor for Absolute Gamers!</p>
+                            <h3 class="text-2xl">Price: $<span id="price">450</span></h3>
+                            <div class="card-actions justify-end">
+                                <button onclick="addToCart(this)" class="btn btn-primary">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 4 -->
+                    <div class="card w-full bg-base-100 shadow-xl">
+                        <figure><img src="img/graphics.jpg" alt="Laptop" /></figure>
+                        <div class="card-body">
+                            <h2 id="product-name" class="card-title">Graphics Card</h2>
+                            <p>Gigabyte Graphics card for High Quality Graphics</p>
+                            <h3 class="text-2xl">Price: $<span id="price">450</span></h3>
+                            <div class="card-actions justify-end">
+                                <button onclick="addToCart(this)" class="btn btn-primary">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 5 -->
+                    <div class="card w-full bg-base-100 shadow-xl">
+                        <figure><img src="img/hp.jpg" alt="Laptop" /></figure>
+                        <div class="card-body">
+                            <h2 id="product-name" class="card-title">HP Envy</h2>
+                            <p>Processor: AMD Ryzen 5 5600U, Slick Design.</p>
+                            <h3 class="text-2xl">Price: $<span id="price">950</span></h3>
+                            <div class="card-actions justify-end">
+                                <button onclick="addToCart(this)" class="btn btn-primary">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 5 -->
+                    <div class="card w-full bg-base-100 shadow-xl">
+                        <figure><img src="img/macbook.jpg" alt="Laptop" /></figure>
+                        <div class="card-body">
+                            <h2 id="product-name" class="card-title">MacBook Pro</h2>
+                            <p>MacBook Pros are supercharged by M1 and M2 chips.</p>
+                            <h3 class="text-2xl">Price: $<span id="price">1250</span></h3>
+                            <div class="card-actions justify-end">
+                                <button onclick="addToCart(this)" class="btn btn-primary">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-1/4">
+                    <div class="overflow-x-auto">
+                        <table class="table w-full">
+                            <!-- head -->
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Product Name</th>
+                                    <th>Price</th>
+                                </tr>
+                            </thead>
+                            <tbody id="table-container">
+                                <!-- Cart data will goes here -->
+                            </tbody>
+                            <tfoot>
+                                <!-- Total Price -->
+                                <tr>
+                                    <td></td>
+                                    <td>Total Price</td>
+                                    <td id="total-price" class="text-lg"></td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="js/cart.js"></script>
+</body>
+
+</html>
